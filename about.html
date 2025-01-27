@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anasayfa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://www.istockphoto.com/tr/photo/japan'); /* Görselin URL'si */
+            background-size: cover; /* Görselin ekranı tamamen kaplamasını sağlar */
+            background-position: center; /* Görselin ortalanmasını sağlar */
+            background-attachment: fixed; /* Sayfa kaydırıldığında görselin sabit kalmasını sağlar */
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.6); /* Yarı saydam siyah arka plan */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            text-align: center;
+            color: white; /* İçeriğin beyaz olmasını sağlarız, zıtlık sağlamak için */
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Hoş Geldiniz</h1>
+        <p>Web siteme hoş geldiniz! Burada projelerim, yazılarım ve daha fazlasını bulabilirsiniz.</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Anasayfa</a>
+        <a href="about.html">Hakkında</a>
+        <a href="projects.html">Projeler</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">İletişim</a>
+    </nav>
+
+    <div class="container">
+        <h2>Anasayfa</h2>
+        <p>Bu sayfada web sitem hakkında genel bilgiler yer almaktadır. Hoş geldiniz!</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Web Sitem. Tüm hakları saklıdır.</p>
+    </footer>
+
+</body>
+</html>

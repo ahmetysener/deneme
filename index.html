@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Sitem</title>
+    <style>
+        /* CSS kodunu buraya yazıyoruz */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://cdn.pixabay.com/photo/2020/05/02/10/35/illustration-5120762_960_720.jpg'); /* Arka plan fotoğrafı */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.5); /* Saydam siyah arka plan */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.7); /* Saydam siyah arka plan */
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .post {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .post h2 {
+            margin-top: 0;
+        }
+        .post-footer {
+            font-size: 14px;
+            color: #777;
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.7); /* Saydam siyah arka plan */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+        .hidden-content {
+            display: none;
+        }
+        /* Form stil */
+        form {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Fotoğrafçılık Sitem</h1>
+        <p>Hayatın her karesinden ilham al</p>
+    </header>
+
+    <nav>
+        <a href="#">Ana Sayfa</a>
+        <a href="about.html">Hakkında</a>
+        <a href="contact.html">İletişim</a>
+        <a href="projects.html">Projeler</a>
+        <a href="blogs.html">Blog</a>
+   
+    </nav>
+
+    <div class="container">
+        <div class="post">
+            <h2>Fotoğrafçılık kariyeri</h2>
+            <p>Aslında fotoğrafçılık ile ilgili bi kariyerim yok. Ama web teknolojileri dersim için.. Lütfen devamını oku butonuna basınız.</p>
+            <div class="hidden-content">
+                <p>Fotoğrafçılık kontentini seçtim.</p>
+            </div>
+            <button onclick="toggleContent()">Devamını Oku</button>
+            <div class="post-footer">Yayın Tarihi: 27 Ocak 2025</div>
+        </div>
+
+        <div class="post">
+            <h2>Fotoğrafçılarımız Ahmet Yasin Şener.</h2>
+            <p>Daha fazla bilgi için hakkımızda , iletişim için iletişimi , projelerimizden haberdar olmak için projeleri ve blogumuz ziyaret etmeyi unutmayın.!</p>
+            <div class="post-footer">Yayın Tarihi: 27 Ocak 2025</div>
+        </div>
+
+        <!-- İletişim Formu -->
+        <div>
+            <h2>İletişim</h2>
+            <form id="contactForm" onsubmit="return validateForm()">
+                <label for="name">Adınız:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">E-posta:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Mesajınız:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Gönder</button>
+            </form>
+        </div>
+
+    </div>
+
+    
+    <script>
+        // Devamını Oku butonu işlevi
+        function toggleContent() {
+            var content = document.querySelector('.hidden-content');
+            var button = document.querySelector('button');
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+                button.textContent = "Gizle";
+            } else {
+                content.style.display = "none";
+                button.textContent = "Devamını Oku";
+            }
+        }
+
+        // Form doğrulama fonksiyonu
+        function validateForm() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+            
+            if (name === "" || email === "" || message === "") {
+                alert("Lütfen tüm alanları doldurun!");
+                return false; // Formun gönderilmesini engeller
+            }
+            return true; // Formu gönderir
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<nav>
+    <a href="index.html">Ana Sayfa</a> <!-- Ana Sayfa linki buraya ekleniyor -->
+    <a href="#">Hakkında</a>
+    <a href="#">İletişim</a>
+    <!-- Yeni Geçiş Linki -->
+    <a href="yeni-sayfa.html">Yeni Sayfa</a> <!-- Yeni Sayfaya Geçiş -->
+</nav>
